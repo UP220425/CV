@@ -57,6 +57,11 @@ body {
     text-align: center;
     border: none;
 }
+@media (max-width: 768px) {
+    body {
+        padding-top: 120px;
+    }
+}
 
 @media (min-width: 768px) {
     .boton {
