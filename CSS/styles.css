@@ -35,6 +35,7 @@ body {
     /* 1rem = 10px */
     font-family: 'Krub', sans-serif;
     background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%);
+    padding-top: 70px;
 }
 
 .contenedor {
@@ -120,6 +121,11 @@ h3 {
 /* Navegacion Principal */
 .nav-bg {
     background-color: var(--secundario);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .navegacion-principal {
@@ -451,3 +457,9 @@ h3 {
     }
 }
 
+.navegacion-principal a.activo {
+    background-color: var(--primario);
+    color: var(--oscuro);
+    box-shadow: 0 4px 18px 0 rgba(255,193,7,0.18);
+    transform: translateY(-3px) scale(1.07);
+}

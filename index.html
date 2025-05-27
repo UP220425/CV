@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
     <link rel="preload" href="CSS/normalize.css" as="style">
     <link rel="stylesheet" href="CSS/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,6 +17,32 @@
     <title>CV online</title>
 
 </head>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const secciones = [
+            { id: 'inicio', link: document.querySelector('.navegacion-principal a[href="#inicio"]') },
+            { id: 'sobremi', link: document.querySelector('.navegacion-principal a[href="#sobremi"]') },
+            { id: 'contacto', link: document.querySelector('.navegacion-principal a[href="#contacto"]') }
+        ];
+
+        function activarMenu() {
+            let scroll = window.scrollY + 120; // Ajusta el offset si tienes header fijo
+            let activo = secciones[0];
+            secciones.forEach(sec => {
+                const el = document.getElementById(sec.id);
+                if (el && el.offsetTop <= scroll) {
+                    activo = sec;
+                }
+            });
+            secciones.forEach(sec => sec.link.classList.remove('activo'));
+            if (activo.link) activo.link.classList.add('activo');
+        }
+
+        window.addEventListener('scroll', activarMenu);
+        activarMenu();
+    });
+    AOS.init();
+</script>
 
 <body>
     <header>
@@ -24,15 +51,14 @@
 
     <div class="nav-bg">
         <nav class="navegacion-principal contenedor">
-            <a href="#">Inicio</a>
+            <a href="#inicio">Inicio</a>
             <a href="#sobremi">Sobre mi</a>
-            <a href="#">Clientes</a>
             <a href="#contacto">Contactos</a>
 
         </nav>
     </div>
 
-    <section class="hero">
+    <section class="hero" data-aos="fade-up">
         <div class="contenido-hero">
             <h2>Diseño y Desarollo de Sistemas</h2>
             <div class="ubicacion">
@@ -51,7 +77,7 @@
     <section id="sobremi" class="sombra contenedor sobremi-section">
         <h2>Sobre mi</h2>
         <div class="sobremi-content">
-            <img src="img/fotoperfil.jpeg" alt="Foto de Carlos Eduardo Medina Quezada" class="sobremi-foto">
+            <img  data-aos="fade-up" data-aos-duration="1000"  src="img/fotoperfil.jpeg" alt="Foto de Carlos Eduardo Medina Quezada" class="sobremi-foto">
             <div class="sobremi-info">
                 <p class="sobremi-desc">
                     Soy Ingeniero en Sistemas Computacionales apasionado por el desarrollo de software y la tecnología.
@@ -87,7 +113,7 @@
 
             <section class="servicio">
                 <h3>Diseño Web</h3>
-                <div class="iconos">
+                <div data-aos="fade-up" data-aos-duration="1000" class="iconos">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
                         stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                         <path
@@ -104,7 +130,7 @@
 
             <section class="servicio">
                 <h3>Aplicaciones Web</h3>
-                <div class="iconos">
+                <div data-aos="fade-up" data-aos-duration="2000" class="iconos">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
                         stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M4 10l0 6" />
@@ -129,7 +155,7 @@
 
             <section class="servicio">
                 <h3>E-Commerce</h3>
-                <div class="iconos">
+                <div data-aos="fade-up" data-aos-duration="3000" class="iconos">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
                         stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M3 5m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z" />
@@ -145,7 +171,7 @@
         </div>
     </main>
 
-    <section>
+    <section id="contacto">
         <h2>Contacto</h2>
         <form class="formulario">
             <fieldset>
@@ -184,7 +210,7 @@
         </form>
     </section>
 
-    <section id="contacto" class="contacto-directo">
+    <section id="contacto1" class="contacto-directo">
         <h2>Contacto directo</h2>
         <ul class="contacto-lista">
             <li>
@@ -240,7 +266,10 @@
     <footer class="footer">
         <p>Todos los derechos reservados ISC. Carlos Eduardo Medina Quezada</p>
     </footer>
-
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
