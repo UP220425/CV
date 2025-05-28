@@ -13,9 +13,7 @@
     <link rel="preload" href="CSS/styles.css" as="style">
     <link rel="stylesheet" href="CSS/styles.css">
 
-
     <title>CV online</title>
-
 </head>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -26,7 +24,7 @@
         ];
 
         function activarMenu() {
-            let scroll = window.scrollY + 120; // Ajusta el offset si tienes header fijo
+            let scroll = window.scrollY + 120;
             let activo = secciones[0];
             secciones.forEach(sec => {
                 const el = document.getElementById(sec.id);
@@ -41,53 +39,50 @@
         window.addEventListener('scroll', activarMenu);
         activarMenu();
     });
-    AOS.init();
 </script>
 
 <body>
-    <header>
-        <h1 class="titulo" id="inicio">ISC. Carlos Eduardo Medina Quezada</h1>
+    <header data-aos="fade-down" data-aos-duration="1000">
+        <h1 class="titulo" id="inicio" data-aos="fade-up" data-aos-delay="100">ISC. Carlos Eduardo Medina Quezada</h1>
     </header>
 
-    <div class="nav-bg">
+    <div class="nav-bg" data-aos="fade-down" data-aos-duration="900" data-aos-delay="200">
         <nav class="navegacion-principal contenedor">
-            <a href="#inicio">Inicio</a>
-            <a href="#sobremi">Sobre mi</a>
-            <a href="#contacto">Contactos</a>
-
+            <a href="#inicio" data-aos="fade-right" data-aos-delay="300">Inicio</a>
+            <a href="#sobremi" data-aos="fade-right" data-aos-delay="350">Sobre mi</a>
+            <a href="#contacto" data-aos="fade-right" data-aos-delay="400">Contactos</a>
         </nav>
     </div>
 
-    <section class="hero" data-aos="fade-up">
-        <div class="contenido-hero">
-            <h2>Diseño y Desarollo de Sistemas</h2>
-            <div class="ubicacion">
+    <section class="hero" data-aos="fade-up" data-aos-duration="1000">
+        <div class="contenido-hero" data-aos="fade-in" data-aos-delay="200">
+            <h2 data-aos="fade-up" data-aos-delay="300">Diseño y Desarollo de Sistemas</h2>
+            <div class="ubicacion" data-aos="fade-up" data-aos-delay="400">
                 <svg xmlns="http://www.w3.org/2000/svg" width="88" height="88" viewBox="0 0 24 24" fill="none"
                     stroke="#ffcc00" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
                     <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
                 </svg>
-                <p>Aguascalientes, Ags.</p>
+                <p data-aos="fade-up" data-aos-delay="500">Aguascalientes, Ags.</p>
             </div>
-            <a class="boton" href="#contacto1">Contactar</a>
+            <a class="boton" href="#contacto1" data-aos="fade-in" data-aos-delay="600">Contactar</a>
         </div>
-
     </section>
 
-    <section id="sobremi" class="sombra contenedor sobremi-section">
-        <h2>Sobre mi</h2>
+    <section id="sobremi" class="sombra contenedor sobremi-section" data-aos="fade-up" data-aos-duration="1000">
+        <h2 data-aos="fade-up" data-aos-delay="100">Sobre mi</h2>
         <div class="sobremi-content">
-            <img  data-aos="fade-up" data-aos-duration="1000"  src="img/fotoperfil.jpeg" alt="Foto de Carlos Eduardo Medina Quezada" class="sobremi-foto">
-            <div class="sobremi-info">
-                <p class="sobremi-desc">
+            <img data-aos="zoom-in" data-aos-duration="900" src="img/fotoperfil.jpeg"
+                alt="Foto de Carlos Eduardo Medina Quezada" class="sobremi-foto">
+            <div class="sobremi-info" data-aos="fade-left" data-aos-delay="200">
+                <p class="sobremi-desc" data-aos="fade-left" data-aos-delay="300">
                     Soy Ingeniero en Sistemas Computacionales apasionado por el desarrollo de software y la tecnología.
                     Me especializo en diseño y desarrollo de aplicaciones web modernas, integrando frontend y backend
                     con tecnologías como React, .NET y bases de datos modernas. Me gusta aprender constantemente y
                     enfrentar nuevos retos tecnológicos.
                 </p>
-                <div class="educacion-box">
+                <div class="educacion-box" data-aos="fade-up" data-aos-delay="400">
                     <span class="educacion-icono">
-                        <!-- SVG de escuela -->
                         <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#0097A7" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round">
                             <path d="M22 10.5L12 4L2 10.5" />
@@ -106,14 +101,53 @@
         </div>
     </section>
 
-    <main class="contenedor sombra">
-        <h2>Mis servicios</h2>
+    <section id="habilidades" class="sombra contenedor habilidades-section" data-aos="fade-up" data-aos-duration="1000">
+        <h2 data-aos="fade-up" data-aos-delay="100">Habilidades</h2>
+        <div class="habilidades-grid">
+            <div class="habilidad-col" data-aos="fade-right" data-aos-delay="200">
+                <h3>Habilidades técnicas</h3>
+                <ul class="habilidades-lista">
+                    <li>React</li>
+                    <li>.NET</li>
+                    <li>JavaScript</li>
+                    <li>HTML &amp; CSS</li>
+                    <li>MongoDB</li>
+                    <li>SQL Server</li>
+                    <li>Consumo de APIs REST</li>
+                    <li>Git &amp; GitHub</li>
+                </ul>
+            </div>
+            <div class="habilidad-col" data-aos="fade-up" data-aos-delay="300">
+                <h3>Habilidades blandas</h3>
+                <ul class="habilidades-lista">
+                    <li>Comunicación efectiva</li>
+                    <li>Trabajo en equipo</li>
+                    <li>Pensamiento crítico</li>
+                    <li>Resolución de problemas</li>
+                    <li>Adaptabilidad</li>
+                    <li>Gestión del tiempo</li>
+                </ul>
+            </div>
+            <div class="habilidad-col" data-aos="fade-left" data-aos-delay="400">
+                <h3>Idiomas</h3>
+                <ul class="habilidades-lista">
+                    <li>
+                        <strong>Español:</strong> Nativo
+                    </li>
+                    <li>
+                        <strong>Inglés:</strong> B1 (TOEFL PBT 500 pts)
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
+    <main class="contenedor sombra" data-aos="fade-up" data-aos-duration="1000">
+        <h2 data-aos="fade-up" data-aos-delay="100">Mis servicios</h2>
         <div class="servicios">
-
-            <section class="servicio">
-                <h3>Diseño Web</h3>
-                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" class="iconos">
+            <section class="servicio" data-aos="fade-up" data-aos-delay="200">
+                <h3 data-aos="fade-up" data-aos-delay="250">Diseño Web</h3>
+                <div data-aos="zoom-in" data-aos-duration="900" data-aos-delay="300" class="iconos">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
                         stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                         <path
@@ -123,14 +157,14 @@
                         <path d="M16.5 10.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
                     </svg>
                 </div>
-                <p>Diseño y maquetación de interfaces modernas y funcionales usando React y Material UI. Me enfoco en la
+                <p data-aos="fade-up" data-aos-delay="350">Diseño y maquetación de interfaces modernas y funcionales usando React y Material UI. Me enfoco en la
                     experiencia del usuario, el diseño responsivo y la integración con APIs para crear sitios atractivos
                     y dinámicos.</p>
             </section>
 
-            <section class="servicio">
-                <h3>Aplicaciones Web</h3>
-                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000" class="iconos">
+            <section class="servicio" data-aos="fade-up" data-aos-delay="300">
+                <h3 data-aos="fade-up" data-aos-delay="350">Aplicaciones Web</h3>
+                <div data-aos="zoom-in" data-aos-duration="900" data-aos-delay="400" class="iconos">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
                         stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M4 10l0 6" />
@@ -148,14 +182,14 @@
                         <path d="M12 4a2 2 0 0 0 2 -2a2 2 0 0 0 -2 2" />
                     </svg>
                 </div>
-                <p>Desarrollo de aplicaciones web completas con backend en .NET y frontend en React. He trabajado en
+                <p data-aos="fade-up" data-aos-delay="450">Desarrollo de aplicaciones web completas con backend en .NET y frontend en React. He trabajado en
                     funcionalidades como login seguro, gestión de usuarios, conexión a bases de datos y consumo de
                     endpoints REST.</p>
             </section>
 
-            <section class="servicio">
-                <h3>E-Commerce</h3>
-                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1500" class="iconos">
+            <section class="servicio" data-aos="fade-up" data-aos-delay="400">
+                <h3 data-aos="fade-up" data-aos-delay="450">E-Commerce</h3>
+                <div data-aos="zoom-in" data-aos-duration="900" data-aos-delay="500" class="iconos">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
                         stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M3 5m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z" />
@@ -164,58 +198,51 @@
                         <path d="M11 15l2 0" />
                     </svg>
                 </div>
-                <p>Implementación de funcionalidades para tiendas en línea, como carritos de compra, integración de
+                <p data-aos="fade-up" data-aos-delay="550">Implementación de funcionalidades para tiendas en línea, como carritos de compra, integración de
                     pagos, formularios dinámicos y generación de PDF. Utilizo herramientas como jsPDF, React y MongoDB
                     para soluciones eficientes y escalables.</p>
             </section>
         </div>
     </main>
 
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <form class="formulario">
+    <section id="contacto" data-aos="fade-up" data-aos-duration="1000">
+        <h2 data-aos="fade-up" data-aos-delay="100">Contacto</h2>
+        <form class="formulario" data-aos="fade-in" data-aos-delay="200">
             <fieldset>
                 <legend>Contactanos llenando todos los campos</legend>
-
                 <div class="contenedor-campos">
-                    <div class="campo">
+                    <div class="campo" data-aos="fade-right" data-aos-delay="300">
                         <label for="nombre">Nombre</label>
                         <input class="input-text" type="text" placeholder="Tu nombre" id="nombre" name="nombre"
                             required>
                     </div>
-
-                    <div class="campo">
+                    <div class="campo" data-aos="fade-right" data-aos-delay="350">
                         <label for="telefono">Telefono</label>
                         <input class="input-text" type="number" placeholder="Tu telefono" id="telefono" name="telefono"
                             required>
                     </div>
-
-                    <div class="campo">
+                    <div class="campo" data-aos="fade-right" data-aos-delay="400">
                         <label for="email">Email</label>
                         <input class="input-text" type="email" placeholder="Tu email" id="email" name="email" required>
                     </div>
-
-                    <div class="campo">
+                    <div class="campo" data-aos="fade-right" data-aos-delay="450">
                         <label for="mensaje">Mensaje</label>
                         <textarea class="input-text" name="mensaje" id="mensaje" cols="30" rows="10"
                             placeholder="Tu mensaje" required></textarea>
-
                     </div>
                 </div>
-                <div class="alinear-derecha flex">
+                <div class="alinear-derecha flex" data-aos="fade-left" data-aos-delay="500">
                     <input class="boton w-sm-100" type="submit" value="Enviar">
                 </div>
-
             </fieldset>
         </form>
     </section>
 
-    <section id="contacto1" class="contacto-directo">
-        <h2>Contacto directo</h2>
+    <section id="contacto1" class="contacto-directo" data-aos="fade-up" data-aos-duration="1000">
+        <h2 data-aos="fade-up" data-aos-delay="100">Contacto directo</h2>
         <ul class="contacto-lista">
-            <li>
+            <li data-aos="fade-right" data-aos-delay="200">
                 <span class="icono-contacto">
-                    <!-- WhatsApp SVG -->
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2"
                         stroke-linecap="round" stroke-linejoin="round">
                         <path
@@ -229,9 +256,8 @@
                     4639533530
                 </a>
             </li>
-            <li>
+            <li data-aos="fade-right" data-aos-delay="250">
                 <span class="icono-contacto">
-                    <!-- Email SVG -->
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ebcb6c" stroke-width="2"
                         stroke-linecap="round" stroke-linejoin="round">
                         <rect x="2" y="4" width="20" height="16" rx="2" />
@@ -243,9 +269,8 @@
                     carcarlos0624@gmail.com
                 </a>
             </li>
-            <li>
+            <li data-aos="fade-right" data-aos-delay="300">
                 <span class="icono-contacto">
-                    <!-- LinkedIn SVG -->
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0077b5" stroke-width="2"
                         stroke-linecap="round" stroke-linejoin="round">
                         <rect x="2" y="2" width="20" height="20" rx="5" />
@@ -263,12 +288,16 @@
         </ul>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" data-aos="fade-up" data-aos-delay="100">
         <p>Todos los derechos reservados ISC. Carlos Eduardo Medina Quezada</p>
     </footer>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
-        AOS.init();
+        AOS.init({
+            once: true,
+            duration: 700,
+            easing: 'ease-in-out',
+        });
     </script>
 </body>
 
